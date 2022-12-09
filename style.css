@@ -1,0 +1,144 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+#im2 {
+    display: none;
+    grid-area: im2;
+}
+
+#card {
+    display: grid;
+    background-color: white;
+    width: 475px;
+    margin: auto;
+    margin-top: 125px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    grid-template-areas:
+        'im im im s1 s1 s1'
+        'im im im s2 s2 s2'
+        'im im im s2 s2 s2'
+        'im im im s2 s2 s2'
+        'im im im s3 s3 s3'
+        'im im im s3 s3 s3'
+        'im im im pr pr pr'
+        'im im im btn btn btn'
+
+    ;
+}
+
+#im {
+    width: 235px;
+    height: 350px;
+    grid-area: im;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#s1 {
+    grid-area: s1;
+    padding: 25px 15px 5px 20px;
+    color: #b6b5b9;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7px;
+}
+
+#s2 {
+    font-family: 'Fraunces', serif;
+    padding: 1px 20px;
+    font-weight: bold;
+    grid-area: s2;
+    font-size: 24px;
+}
+
+#s3 {
+    padding: 1px 20px;
+    grid-area: s3;
+    color: #828282;
+    font-size: 14px;
+}
+
+#pr {
+    font-family: 'Fraunces', serif;
+    color: hsl(158, 36%, 37%);
+    padding: 0px 15px 10px 20px;
+    grid-area: pr;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+#dis {
+    color: #a5a5a5;
+    font-size: 10px;
+    text-decoration: line-through;
+    align-items: center;
+}
+
+#btn {
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 7px;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    padding: 10px 5px;
+    margin: 10px 15px;
+    grid-area: btn;
+}
+
+#btn:hover {
+    background-color: hsl(212, 21%, 14%);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    width: 100vw;
+}
+
+@media (max-width: 375px) {
+    #im {
+        display: none;
+    }
+    
+    .attribution {
+        transform: scale(0.5);
+        width: 100vw;
+        height: 1vh;
+    }
+    
+    #im2{
+        display: block;
+        width: 90vw;
+        height: 40vh;
+        grid-area: im2;
+    }
+    
+    #card {
+        margin: 5vh 5vw;
+        width: 90vw;
+        height: 90vh;
+        grid-template-areas:
+        'im2 im2 im2'
+        'im2 im2 im2'
+        'im2 im2 im2'
+        's1 s1 s1'
+        's2 s2 s2'
+        's2 s2 s2'
+        's2 s2 s2'
+        's3 s3 s3'
+        's3 s3 s3'
+        'pr pr pr'
+        'btn btn btn'
+    }
+}
